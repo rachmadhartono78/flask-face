@@ -1,8 +1,10 @@
-from flask import render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import cv2
 import numpy as np
 import face_recognition
 import os
+
+app = Flask(__name__)
 
 # Load known faces
 path = 'lib/attendance'
